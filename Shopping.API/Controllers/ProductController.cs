@@ -26,10 +26,14 @@ namespace Shopping.API.Controllers
         [HttpGet]
         public async Task<IEnumerable<Product>> Get()
         {
+
+            //return ProductContext.Products;
+            
             return await _context
                             .Products
                             .Find(p => true)
                             .ToListAsync();
+            
         }
 
     }
